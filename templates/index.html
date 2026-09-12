@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>InstaForge - Instagram Username Generator</title>
+
+    <meta name="description"
+          content="Generate creative Instagram username ideas with InstaForge.">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <span class="logo-icon">✦</span>
+
+        InstaForge
+
+    </div>
+
+
+    <button
+        id="themeBtn"
+        class="icon-btn"
+        title="Change theme">
+
+        🌙
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="badge">
+
+            ✨ Smart Instagram Username Generator
+
+        </div>
+
+
+        <h1>
+
+            Create Your
+
+            <span>Perfect Username</span>
+
+        </h1>
+
+
+        <p class="hero-text">
+
+            Generate creative, stylish and memorable
+            Instagram username ideas in seconds.
+
+        </p>
+
+
+
+        <!-- GENERATOR CARD -->
+
+        <div class="generator-card">
+
+
+            <!-- NAME -->
+
+            <div class="input-group">
+
+                <label for="keyword">
+
+                    Your name or keyword
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="keyword"
+                    placeholder="e.g. Ghaith"
+                    maxlength="30"
+                    autocomplete="off">
+
+            </div>
+
+
+
+            <!-- OPTIONS -->
+
+            <div class="options-row">
+
+
+                <!-- STYLE -->
+
+                <div class="input-group">
+
+                    <label for="style">
+
+                        Username style
+
+                    </label>
+
+
+                    <select id="style">
+
+                        <option value="cool">
+                            😎 Cool
+                        </option>
+
+                        <option value="gaming">
+                            🎮 Gaming
+                        </option>
+
+                        <option value="aesthetic">
+                            ✨ Aesthetic
+                        </option>
+
+                        <option value="minimal">
+                            ⚡ Minimal
+                        </option>
+
+                        <option value="professional">
+                            💼 Professional
+                        </option>
+
+                        <option value="dark">
+                            🌑 Dark
+                        </option>
+
+                        <option value="football">
+                            ⚽ Football
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- AMOUNT -->
+
+                <div class="input-group">
+
+                    <label for="amount">
+
+                        Number of names
+
+                    </label>
+
+
+                    <select id="amount">
+
+                        <option value="5">
+                            5
+                        </option>
+
+                        <option value="10" selected>
+                            10
+                        </option>
+
+                        <option value="15">
+                            15
+                        </option>
+
+                        <option value="20">
+                            20
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- GENERATE -->
+
+            <button
+                id="generateBtn"
+                class="generate-btn">
+
+                <span>⚡</span>
+
+                Generate Usernames
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULTS
+    ========================= -->
+
+    <section class="results-section">
+
+
+        <div class="results-header">
+
+
+            <div>
+
+                <h2>
+
+                    Your Username Ideas
+
+                </h2>
+
+
+                <p id="resultCount">
+
+                    Generate some usernames
+                    to get started.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="result-actions">
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="🔎 Search results..."
+                    autocomplete="off">
+
+
+                <button
+                    id="clearFavoritesBtn"
+                    class="secondary-btn">
+
+                    Clear Favorites
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RESULTS -->
+
+        <div
+            id="results"
+            class="results-grid">
+
+
+            <div class="empty-state">
+
+                <div class="empty-icon">
+
+                    ✨
+
+                </div>
+
+
+                <h3>
+
+                    No usernames yet
+
+                </h3>
+
+
+                <p>
+
+                    Enter a name above
+                    and click Generate.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FEATURES
+    ========================= -->
+
+    <section class="features">
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Fast Generation
+            </h3>
+
+            <p>
+                Generate multiple username
+                ideas in seconds.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎨
+            </div>
+
+            <h3>
+                Multiple Styles
+            </h3>
+
+            <p>
+                Choose from gaming,
+                aesthetic, professional
+                and more.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ⭐
+            </div>
+
+            <h3>
+                Save Favorites
+            </h3>
+
+            <p>
+                Save your favorite usernames
+                in your browser.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🔎
+            </div>
+
+            <h3>
+                Check Manually
+            </h3>
+
+            <p>
+                Open Instagram and manually
+                check a username.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <strong>
+                InstaForge
+            </strong>
+
+            <p>
+                Create your next Instagram identity.
+            </p>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            © 2026 InstaForge
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     TOAST
+========================= -->
+
+<div id="toast" class="toast">
+
+    <span id="toastMessage"></span>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+
+</html>
