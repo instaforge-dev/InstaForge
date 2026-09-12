@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 import random
 import re
 
@@ -279,7 +279,9 @@ def generate_usernames(
 # ==========================================
 # HOME PAGE
 # ==========================================
-
+@app.route("/google5bc89d04e06fdb11.html")
+def google_verification():
+    return send_from_directory(".", "google5bc89d04e06fdb11.html")
 @app.route("/")
 def home():
 
